@@ -59,7 +59,7 @@ namespace BearingsHelper.Classes
         public double CalculateTemaxAdjustedForDeckSurfacing(double tsurf)
         {
             List<double> x = new List<double> { 0, 40, 100, 200 };
-            List<double> y = new List<double> { 0, 2, 0, -4 };
+            List<double> y = new List<double> { 4, 2, 0, -4 };
             return MathHelpers.CalculateInterpolatedValue(tsurf, x, y);
         }
 
