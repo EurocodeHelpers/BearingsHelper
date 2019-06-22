@@ -76,45 +76,45 @@ namespace BearingsHelper
 
             //Write values to calculation window
 
-            WriteDoubleToTextBox(ref txtAltitude2, b.Altitude, 1);
-            WriteDoubleToTextBox(ref txtTmaxA, b.Tmax_A, 1);
-            WriteDoubleToTextBox(ref txtTminA, b.Tmin_A, 1);
+            WriteDoubleToTextBox(ref txtAltitude2, b.Altitude, 4);
+            WriteDoubleToTextBox(ref txtTmaxA, b.Tmax_A, 4);
+            WriteDoubleToTextBox(ref txtTminA, b.Tmin_A, 4);
 
-            WriteDoubleToTextBox(ref txtDesignLife2, b.DesignLife, 1);
+            WriteDoubleToTextBox(ref txtDesignLife2, b.DesignLife, 4);
             WriteDoubleToTextBox(ref txtP, b.p, 4);
-            WriteDoubleToTextBox(ref txtTmaxADL, b.Tmax_A_120, 1);
-            WriteDoubleToTextBox(ref txtTminADL, b.Tmin_A_120, 1);
+            WriteDoubleToTextBox(ref txtTmaxADL, b.Tmax_A_120, 4);
+            WriteDoubleToTextBox(ref txtTminADL, b.Tmin_A_120, 4);
 
             //2. Calculate effective bridge temperatures 
-            WriteDoubleToTextBox(ref txtTemax, b.Temax, 1);
-            WriteDoubleToTextBox(ref txtTemin, b.Temin, 1);
-            WriteDoubleToTextBox(ref txtSurfacing2, b.SurfacingThickness, 0);
-            WriteDoubleToTextBox(ref txtTemaxadj, b.Temax_Adj, 1);
-            WriteDoubleToTextBox(ref txtTeminadj, b.Temin_Adj, 1);
+            WriteDoubleToTextBox(ref txtTemax, b.Temax, 4);
+            WriteDoubleToTextBox(ref txtTemin, b.Temin, 4);
+            WriteDoubleToTextBox(ref txtSurfacing2, b.SurfacingThickness, 4);
+            WriteDoubleToTextBox(ref txtTemaxadj, b.Temax_Adj, 4);
+            WriteDoubleToTextBox(ref txtTeminadj, b.Temin_Adj, 4);
 
             //3. Calculate characteristic values of temperature change. 
-            WriteDoubleToTextBox(ref txtTemaxadj, b.T0, 1);
-            WriteDoubleToTextBox(ref txtTeminadj, b.T0, 1);
-            WriteDoubleToTextBox(ref txtT02, b.T0, 1);
-            WriteDoubleToTextBox(ref txtTNexp, b.TN_exp, 1);
-            WriteDoubleToTextBox(ref txtTNcon, b.TN_con, 1);
+            WriteDoubleToTextBox(ref txtTemaxadj, b.Temax_Adj, 4);
+            WriteDoubleToTextBox(ref txtTeminadj, b.Temin_Adj, 4);
+            WriteDoubleToTextBox(ref txtT02, b.T0, 4);
+            WriteDoubleToTextBox(ref txtTNexp, b.TN_exp, 4);
+            WriteDoubleToTextBox(ref txtTNcon, b.TN_con, 4);
 
             //4. Calculate design movement ranges 
 
-            WriteDoubleToTextBox(ref txtTol, b.tol, 1);
-            WriteDoubleToTextBox(ref txtTemaxadj2, b.Temax_Adj, 1);
-            WriteDoubleToTextBox(ref txtTeminadj2, b.Temin_Adj, 1);
+            WriteDoubleToTextBox(ref txtTol, b.tol, 4);
+            WriteDoubleToTextBox(ref txtTemaxadj2, b.Temax_Adj, 4);
+            WriteDoubleToTextBox(ref txtTeminadj2, b.Temin_Adj, 4);
 
-            WriteDoubleToTextBox(ref txtVxexpULS, b.Vxexp_ULS, 1);
-            WriteDoubleToTextBox(ref txtVxconULS, b.Vxcon_ULS, 1);
-            WriteDoubleToTextBox(ref txtVxexpSLS, b.Vxexp_SLS, 1);
-            WriteDoubleToTextBox(ref txtVxconSLS, b.Vxcon_SLS, 1);
+            WriteDoubleToTextBox(ref txtVxexpULS, b.Vxexp_ULS, 4);
+            WriteDoubleToTextBox(ref txtVxconULS, b.Vxcon_ULS, 4);
+            WriteDoubleToTextBox(ref txtVxexpSLS, b.Vxexp_SLS, 4);
+            WriteDoubleToTextBox(ref txtVxconSLS, b.Vxcon_SLS, 4);
 
             txtULS.Text = $"+{Math.Ceiling(b.Vxexp_ULS)}/-{Math.Ceiling(b.Vxcon_ULS)}";
             txtSLS.Text = $"+{Math.Ceiling(b.Vxexp_SLS)}/-{Math.Ceiling(b.Vxcon_SLS)}";
 
-            WriteDoubleToTextBox(ref txtULSRange, b.Range_ULS, 1);
-            WriteDoubleToTextBox(ref txtSLSRange, b.Range_SLS, 1);
+            WriteDoubleToTextBox(ref txtULSRange, b.Range_ULS, 4);
+            WriteDoubleToTextBox(ref txtSLSRange, b.Range_SLS, 4);
         }
 
         public void WriteDoubleToTextBox(ref TextBox tb, double value, int NumberOfSF)
