@@ -68,13 +68,6 @@ namespace BearingsHelper.Classes
             List<double> x = new List<double> { 0, 40, 100, 200 };
             List<double> y = new List<double> { -3, -2, 0, 3 };
             return MathHelpers.CalculateInterpolatedValue(tsurf, x, y);
-        }
-
-        //Procedure 
-        /*
-         * 1. Calculate Tmax,A and Tmin,A
-         * 2. Calculate Tmax,A,120 and Tmin,A,120 
-         * 3. Calculate Temin
-         */
+        }       
     }
 }
