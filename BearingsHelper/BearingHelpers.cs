@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BearingsHelper.Forms;
+
 
 namespace BearingsHelper
 {
@@ -16,36 +18,29 @@ namespace BearingsHelper
         public BearingHelpers()
         {
             InitializeComponent();
-        }
+        }       
 
-        private void Label21_Click(object sender, EventArgs e)
+        public void WriteDoubleToTextBox(ref TextBox tb, double value, int NumberOfSF)
         {
+            double roundedValue = Math.Round(value, NumberOfSF);
+            tb.Text = roundedValue.ToString();
+            return;
+        }       
 
-        }
-
-        private void TabPage3_Click(object sender, EventArgs e)
+        private void BtnAbout_Click(object sender, EventArgs e)
         {
-
+            Form frm = new About();
+            frm.Show();
         }
 
-        private void Label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void BtnCalculate_Click(object sender, EventArgs e)
+        private void BtnCalculate_Click_1(object sender, EventArgs e)
         {
             double Tmax = TextboxHelpers.TextBoxToDouble(txtTmax);
             double Tmin = TextboxHelpers.TextBoxToDouble(txtTmin);
             double T0 = TextboxHelpers.TextBoxToDouble(txtT0);
             double Altitude = TextboxHelpers.TextBoxToDouble(txtAltitude);
             double SurfacingThickness = TextboxHelpers.TextBoxToDouble(txtSurfacing);
-            double L = TextboxHelpers.TextBoxToDouble(txtLength)*1000;  //Convert to mm 
+            double L = TextboxHelpers.TextBoxToDouble(txtLength) * 1000;  //Convert to mm 
 
             double DesignLife = TextboxHelpers.TextBoxToDouble(txtDesignLife);
             double alpha = TextboxHelpers.TextBoxToDouble(txtAlpha);
@@ -117,12 +112,7 @@ namespace BearingsHelper
             WriteDoubleToTextBox(ref txtSLSRange, b.Range_SLS, 4);
         }
 
-        public void WriteDoubleToTextBox(ref TextBox tb, double value, int NumberOfSF)
-        {
-            double roundedValue = Math.Round(value, NumberOfSF);
-            tb.Text = roundedValue.ToString();
-            return;
-        }
+        #region
 
         private void BearingHelpers_Load(object sender, EventArgs e)
         {
@@ -168,6 +158,32 @@ namespace BearingsHelper
         {
 
         }
+
+        private void Label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        #endregion
+
+
+
+
     }
 }
 
