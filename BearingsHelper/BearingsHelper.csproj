@@ -63,11 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BearingsHelper.cs">
+    <Compile Include="BearingHelpers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BearingsHelper.Designer.cs">
-      <DependentUpon>BearingsHelper.cs</DependentUpon>
+    <Compile Include="BearingHelpers.Designer.cs">
+      <DependentUpon>BearingHelpers.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\BearingDesignDisplacements.cs" />
     <Compile Include="Classes\MathHelpers.cs" />
@@ -75,15 +75,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\BearingDesignDisplacementsTests.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BearingHelpers.resx">
+      <DependentUpon>BearingHelpers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\BearingHelpers.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -16,7 +16,7 @@ namespace BearingsHelper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BearingsHelper());
+            Application.Run(new BearingHelpers());
         }
     }
 }
