@@ -93,9 +93,59 @@ namespace BearingsHelper.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EN_1990_Partial_Factors {
+            get {
+                object obj = ResourceManager.GetObject("EN 1990 Partial Factors", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ExcelButton {
             get {
                 object obj = ResourceManager.GetObject("ExcelButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap k_values {
+            get {
+                object obj = ResourceManager.GetObject("k values", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap k_values_National_Annex {
+            get {
+                object obj = ResourceManager.GetObject("k values National Annex", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tmax {
+            get {
+                object obj = ResourceManager.GetObject("Tmax", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tmin {
+            get {
+                object obj = ResourceManager.GetObject("Tmin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

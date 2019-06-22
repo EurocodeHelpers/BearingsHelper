@@ -179,11 +179,15 @@ namespace BearingsHelper
 
         }
 
+
+
+
         #endregion
 
+        private void TxtBridgeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
 

@@ -128,6 +128,21 @@
   <ItemGroup>
     <None Include="Resources\ExcelButton.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tmax.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tmin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k values.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k values National Annex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EN 1990 Partial Factors.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
