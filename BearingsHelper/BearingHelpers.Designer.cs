@@ -2898,6 +2898,7 @@
             this.btnExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnExcel.TabIndex = 4;
             this.btnExcel.TabStop = false;
+            this.btnExcel.Click += new System.EventHandler(this.BtnExcel_Click);
             // 
             // pictureBox7
             // 

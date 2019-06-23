@@ -56,14 +56,14 @@ namespace BearingsHelper.Classes
 
         //Helper Functions 
 
-        public double CalculateTemaxAdjustedForDeckSurfacing(double tsurf)
+        private double CalculateTemaxAdjustedForDeckSurfacing(double tsurf)
         {
             List<double> x = new List<double> { 0, 40, 100, 200 };
             List<double> y = new List<double> { 4, 2, 0, -4 };
             return MathHelpers.CalculateInterpolatedValue(tsurf, x, y);
         }
 
-        public double CalculateTeminAdjustedForDeckSurfacing(double tsurf)
+        private double CalculateTeminAdjustedForDeckSurfacing(double tsurf)
         {
             List<double> x = new List<double> { 0, 40, 100, 200 };
             List<double> y = new List<double> { -3, -2, 0, 3 };
