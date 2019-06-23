@@ -70,10 +70,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BearingHelpers.cs">
+    <Compile Include="Forms\BearingHelpers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BearingHelpers.Designer.cs">
+    <Compile Include="Forms\BearingHelpers.Designer.cs">
       <DependentUpon>BearingHelpers.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\BearingDesignDisplacements.cs" />
@@ -89,11 +89,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Tests\BearingDesignDisplacementsTests.cs" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -113,7 +108,7 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BearingHelpers.resx">
+    <EmbeddedResource Include="Forms\BearingHelpers.resx">
       <DependentUpon>BearingHelpers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\About.resx">
@@ -122,7 +117,7 @@
     <EmbeddedResource Include="Properties\BearingHelpers.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -133,9 +128,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CalculateButton.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ExcelButton.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tmax.jpg" />
@@ -180,6 +172,27 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThermalExpnCoefficient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\distSketch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AltitudeClause.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adjus Bridge Surfacing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eff Bridge Temp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bridgeTypes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ExcelButton.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

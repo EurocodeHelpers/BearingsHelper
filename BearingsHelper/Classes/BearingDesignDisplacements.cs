@@ -15,6 +15,7 @@ namespace BearingsHelper.Classes
         public double Altitude { get; set; }
         public double SurfacingThickness { get; set; }
         public double L { get; set; }
+        public int Type => 2;
 
         public double DesignLife { get; set; }
         public double Alpha { get; set; }

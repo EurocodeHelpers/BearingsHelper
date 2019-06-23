@@ -65,6 +65,7 @@ namespace BearingsHelper
                     WriteDoubleToTextBox(ref txtTminADL, b.Tmin_A_120, 1);
 
                     //2. Calculate effective bridge temperatures 
+                    WriteDoubleToTextBox(ref txtType2, b.Type, 0);                    
                     WriteDoubleToTextBox(ref txtTemax, b.Temax, 1);
                     WriteDoubleToTextBox(ref txtTemin, b.Temin, 1);
                     WriteDoubleToTextBox(ref txtSurfacing2, b.SurfacingThickness, 0);
@@ -215,7 +216,8 @@ namespace BearingsHelper
             TextboxHelpers.ClearTextBox(ref txtP);
             TextboxHelpers.ClearTextBox(ref txtTmaxADL);
             TextboxHelpers.ClearTextBox(ref txtTminADL);
-
+            
+            TextboxHelpers.ClearTextBox(ref txtType2);
             TextboxHelpers.ClearTextBox(ref txtTemax);
             TextboxHelpers.ClearTextBox(ref txtTemin);
             TextboxHelpers.ClearTextBox(ref txtSurfacing2);
@@ -283,41 +285,7 @@ namespace BearingsHelper
             return b;
         }
 
-        #endregion
-
-
-
-
-        private void BtnExcel_Click(object sender, EventArgs e)
-        {
-            Excel.Application oXL;
-            Excel._Workbook oWB;
-            Excel._Worksheet oSheet;
-            Excel.Range oRng;
-            var b = ReturnBearingDesignDisplacemetnsObjectFromTBInputs();
-
-            //Start Excel, Get Application Object+New Workbook
-            oXL = new Excel.Application();
-            oXL.Visible = true;
-            oWB = (Excel._Workbook)(oXL.Workbooks.Add(Missing.Value));
-            oSheet = (Excel._Worksheet)oWB.ActiveSheet;
-
-            //Enter in some sample data 
-            oSheet.Cells[1, 1] = b.K1;
-            oSheet.Cells[1, 2] = b.K2;
-            oSheet.Cells[1, 3] = b.K3;
-            oSheet.Cells[1, 4] = b.K4;
-
-            //Make data bold and centred 
-            oSheet.get_Range("A1", "D1").Font.Bold = true;
-            oSheet.get_Range("A1", "D1").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-
-            oXL.Visible = true;
-            oXL.UserControl = true; 
-        }
-
-
-
+        #endregion              
     }
 }
 
