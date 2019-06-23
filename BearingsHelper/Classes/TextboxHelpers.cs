@@ -15,6 +15,12 @@ namespace BearingsHelper.Classes
             return double.Parse(tb.Text);
         }
 
+        public static void ClearTextBox(ref TextBox tb)
+        {
+            tb.Clear();
+            return;
+        }
+
         //Colour textbox green if Less than 1, else 
         public static TextBox TextBoxConditionalFormatting(ref TextBox tb)
         {
